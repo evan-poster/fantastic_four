@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<title>Collab App</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				text-align: center;
+				padding: 20px;
+				background-color: #f9f9f9
+			}
+			h1 {
+				color: #333
+			}
+			form {
+				margin: 20px auto;
+				padding: 20px
+				border: 1px solid #ccc
+				border-radius: 10px
+				max-width: 400px;
+				background-color: #fff;
+			}
+			button {
+				padding: 10px 15px;
+				background-color: #007bff
+				color: white;
+				border none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: #0056b3
+			}
+			#feedback {
+				margin-top: 20px;
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Upload Your Image:</h1>
+		<form id="uploadForm">
+			<label for="imageUpload">Choose an image:</label>
+			<input type="file" id="imageUpload" name="image" accept="image/*" required>
+			<br>
+			<button type="submit">Upload</button>
+		</form>
+		<div id="feedback"></div>
+
+		<script>
+			<!-- JS script goes here-->
+		</script>
+	</body>
+</html>
