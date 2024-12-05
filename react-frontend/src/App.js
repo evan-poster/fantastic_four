@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BlobServiceClient } from '@azure/storage-blob';
 import logo from './logo.svg';
 import './App.css';
+import Uploader from './Uploader';
+import Gallery from './Gallery';
 
 function App() {
   const [blobList, setBlobList] = useState([]);
@@ -17,7 +19,7 @@ function App() {
 
         // Construct the blob service client URL
         const blobServiceUrl = `https://${accountName}.blob.core.windows.net`;
-        
+
         // Create the BlobServiceClient object
         const blobServiceClient = new BlobServiceClient(`${blobServiceUrl}?${sasToken}`);
 
@@ -40,16 +42,23 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Azure Blob Storage in React</h1>
-        <ul>
-          {blobList.map((blob, index) => (
-            <li key={index}>{blob}</li>
-          ))}
-        </ul>
-      </header>
+    <div className="container">
+      <div className="header">Welcome to Lab 4</div>
+
+      <div className="team-info">
+        <div><span className="role">Project Director:</span> Evan</div>
+        <div><span className="role">Assistant Managers:</span> Victor, James, Marcus</div>
+      </div>
+
+      <div className="date">{new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+
+      <Uploader />
+      <Gallery />
+      <ul>
+        {blobList.map((blob, index) => (
+          <li key={index}>{blob}</li>
+        ))}
+      </ul>
     </div>
   );
 }

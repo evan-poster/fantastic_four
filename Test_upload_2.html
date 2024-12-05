@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Lab 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            margin-top: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .team-info {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .team-info .role {
+            font-weight: bold;
+            color: #333;
+        }
+        .date {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .file-upload {
+            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .custom-uploader {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .file-upload input[type="file"] {
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin-top: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .view-uploaded-files {
+            margin-top: 30px;
+        }
+        .view-uploaded-files a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .view-uploaded-files a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Welcome to Lab 4</div>
+
+        <!-- Team Information -->
+        <div class="team-info">
+            <div><span class="role">Project Director:</span> Evan</div>
+            <div><span class="role">Assistant Managers:</span> Victor, James, Marcus</div>
+        </div>
+
+        <!-- Today's Date -->
+        <div class="date"><?php echo date('F j, Y'); ?></div>
+
+        <!-- File Upload Section -->
+        <div class="file-upload">
+            <h3>File Upload Section</h3>
+            <!-- File Uploader HTML -->
+            <form action="fileupload.php" enctype="multipart/form-data" method="post">
+                <label class="custom-uploader" for="file">Upload Your File</label><br>
+                <input id="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" name="fileToUpload" type="file" /><br>
+                <button class="btn" name="submit" type="submit">Upload File</button>
+            </form>
+        </div>
+
+        <!-- View Uploaded Files -->
+        <div class="view-uploaded-files">
+            <h3>View Uploaded Files</h3>
+            <a href="viewuploadedfiles.php">Click here to view uploaded files</a>
+        </div>
+    </div>
+</body>
+</html>
