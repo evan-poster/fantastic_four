@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Pictures per Line</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+            gap: 20px; /* Space between the images */
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%; /* Makes sure the images fill the grid cell */
+            height: auto;
+            border-radius: 8px; /* Optional: adds rounded corners to images */
+        }
+        .gallery div {
+            overflow: hidden;
+            border-radius: 8px; /* Optional: adds border-radius to the image container */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; padding-top: 20px;">Upload Files Gallery</h1>
+
+    <div className="gallery">
+        <div><img src="https://via.placeholder.com/300" alt="Image 1"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 2"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 3"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 4"></div>
+
+        <div><img src="https://via.placeholder.com/300" alt="Image 5"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 6"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 7"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 8"></div>
+
+        <div><img src="https://via.placeholder.com/300" alt="Image 9"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 10"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 11"></div>
+        <div><img src="https://via.placeholder.com/300" alt="Image 12"></div>
+    </div>
+
+</body>
+</html>
