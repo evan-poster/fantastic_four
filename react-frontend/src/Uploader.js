@@ -7,12 +7,12 @@ function Uploader() {
   const [blobList, setBlobList] = useState([]);
 
   return (
-	<div class="file-upload">
+	<div className="file-upload">
 		<h3>File Upload Section</h3>
-		<form action="fileupload.php" enctype="multipart/form-data" method="post">
-			<label class="custom-uploader" for="file">Upload Your File</label><br />
+		<form action="fileupload.php" encType="multipart/form-data" method="post">
+			<label className="custom-uploader" for="file">Upload Your File</label><br />
 			<input id="file" accept="image/jpeg,image/gif,image/png,application/pdf,image/x-eps" name="fileToUpload" type="file" /><br />
-			<button class="btn" name="submit" type="submit">Upload File</button>
+			<button className="btn" name="submit" type="submit">Upload File</button>
 		</form>
 	</div>
   );
