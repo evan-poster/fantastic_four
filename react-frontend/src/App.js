@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { BlobServiceClient } from '@azure/storage-blob';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Uploader from './Uploader';
 import Gallery from './Gallery';
