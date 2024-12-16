@@ -48,7 +48,7 @@ function Uploader() {
         <div className="file-upload">
             <h2>Upload an Image</h2>
             <input type="file" onChange={handleFileChange} /><br />
-            <button class="btn" onClick={uploadFile}>Upload</button>
+            <button className="btn" onClick={uploadFile}>Upload</button>
             {uploadStatus && <p>{uploadStatus}</p>}
         </div>
     );
